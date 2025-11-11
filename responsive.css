@@ -1,0 +1,45 @@
+/* Applying the font to the whole page */
+body {
+    font-family: 'Manrope', sans-serif;
+}
+
+/* Custom styles for the chart bar animation */
+@keyframes growBar {
+    from {
+        transform: scaleY(0);
+    }
+    to {
+        transform: scaleY(1);
+    }
+}
+
+.chart-bar {
+    /* Apply animation */
+    animation: growBar 0.8s ease-out;
+    /* Start animation from the bottom */
+    transform-origin: bottom;
+    transition: background-color 0.2s;
+}
+
+.chart-bar:hover {
+    background-color: #fca5a5; /* Lighter red on hover */
+}
+
+/* Custom scrollbar for webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #27272a; /* brand-gray */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4b4b4e; /* A slightly lighter gray */
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #DC2626; /* brand-red */
+}

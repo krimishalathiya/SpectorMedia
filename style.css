@@ -1,0 +1,87 @@
+
+        /* Applying the font to the whole page */
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #1a1a1a; /* Using brand-dark as default bg */
+            color: #f5f5f5; /* Light text for dark bg */
+        }
+        
+        /* Custom class for gradient text */
+        .text-gradient {
+            background: linear-gradient(90deg, #DC2626, #f5f5f5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        /* Custom Modal for Form Submission */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.6);
+            /* Added for fade-in */
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            padding-top: 100px;
+        }
+
+        .modal-content {
+            background-color: #27272a;
+            margin: auto;
+            padding: 24px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 12px;
+            text-align: center;
+            color: #f5f5f5;
+            /* Added for pop-up animation */
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .modal-close:hover,
+        .modal-close:focus {
+            color: #DC2626;
+            text-decoration: none;
+        }
+
+        /* --- Animation Styles --- */
+
+        /* Scroll-reveal "before" state */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        /* Scroll-reveal "after" state (when 'visible' class is added) */
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Client logo hover effect */
+        .client-logo {
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .client-logo:hover {
+            transform: scale(1.1);
+            opacity: 1; /* Make it full opacity on hover */
+        }

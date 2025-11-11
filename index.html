@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spector Media - India's Digital Marketing Agency</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Font: Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- === LINK TO YOUR CUSTOM CSS FILE === -->
+    <!-- This tells the HTML to load your styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-red': '#DC2626', // A strong red
+                        'brand-dark': '#1a1a1a', // A deep black
+                        'brand-gray': '#27272a', // A dark gray
+                    },
+                    fontFamily: {
+                        'sans': ['Manrope', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="bg-brand-dark/80 backdrop-blur-sm sticky top-0 z-50 shadow-lg shadow-brand-red/10">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            
+            <!-- Logo -->
+            <a href="#home" class="flex items-center gap-3">
+               
+                <img src="C:\Users\KRIMISHA\OneDrive\Desktop\html\project\images\Logo.jpg" alt="Spector Media Logo" class="h-10 w-auto">
+                <span class="text-3xl font-extrabold text-white">
+                    Spector<span class="text-brand-red">Media</span>
+                </span>
+            </a>
+            
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex space-x-6 lg:space-x-8">
+                <a href="#home" class="text-gray-300 hover:text-brand-red transition duration-300">Home</a>
+                <a href="#about" class="text-gray-300 hover:text-brand-red transition duration-300">About Us</a>
+                <a href="#services" class="text-gray-300 hover:text-brand-red transition duration-300">Services</a>
+                <a href="#portfolio" class="text-gray-300 hover:text-brand-red transition duration-300">Portfolio</a>
+                <a href="#contact" class="bg-brand-red text-white px-5 py-2 rounded-full font-bold hover:bg-red-700 transition duration-300">Contact</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-gray">
+            <a href="#home" class="block text-gray-300 hover:text-brand-red px-6 py-3 transition duration-300 mobile-link">Home</a>
+            <a href="#about" class="block text-gray-300 hover:text-brand-red px-6 py-3 transition duration-300 mobile-link">About Us</a>
+            <a href="#services" class="block text-gray-300 hover:text-brand-red px-6 py-3 transition duration-300 mobile-link">Services</a>
+            <a href="#portfolio" class="block text-gray-300 hover:text-brand-red px-6 py-3 transition duration-300 mobile-link">Portfolio</a>
+            <a href="#contact" class="block bg-brand-red text-white text-center mx-6 my-3 px-5 py-2 rounded-full font-bold hover:bg-red-700 transition duration-300 mobile-link">Contact</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center bg-brand-dark py-20 lg:py-0 overflow-hidden">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                <!-- Hero Text -->
+                <div class="text-center md:text-left reveal" data-delay="100">
+                    <span class="text-brand-red font-semibold uppercase tracking-wider">Welcome to Spector Media</span>
+                    <h1 class="text-5xl lg:text-7xl font-extrabold text-white mt-4 mb-6 leading-tight">
+                        Amplify Your Brand.
+                        <span class="text-gradient">Dominate The Digital Space.</span>
+                    </h1>
+                    <p class="text-lg text-gray-300 mb-10">
+                        We are India's results-driven digital marketing agency, crafting bespoke strategies to elevate your brand and skyrocket your growth.
+                    </p>
+                    <a href="#contact" class="bg-brand-red text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-red-700 transition duration-300 shadow-lg shadow-brand-red/30">
+                        Get a Free Quote
+                    </a>
+                </div>
+                
+                <!-- Hero Image -->
+                <div class="reveal" data-delay="300">
+                    <img src="C:\Users\KRIMISHA\OneDrive\Desktop\html\project\images\download.jpeg" 
+                         alt="Digital Marketing Strategy" 
+                         class="rounded-lg shadow-2xl mx-auto">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20 bg-brand-gray overflow-hidden">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                <!-- About Image -->
+                <div class="reveal">
+                    <img src="C:\Users\KRIMISHA\OneDrive\Desktop\html\project\images\media team.jpg" 
+                         alt="Spector Media Team" 
+                         class="rounded-lg shadow-xl mx-auto">
+                </div>
+                
+                <!-- About Text -->
+                <div class="text-center md:text-left reveal" data-delay="200">
+                    <span class="text-brand-red font-semibold uppercase tracking-wider">Who We Are</span>
+                    <h2 class="text-4xl lg:text-5xl font-extrabold text-white mt-4 mb-6">
+                        India-Based. Globally-Minded.
+                    </h2>
+                    <p class="text-lg text-gray-300 mb-6">
+                        Spector Media was born from a passion for helping Indian businesses shine on the global digital stage. Based in the heart of India, our team of creative thinkers, strategists, and tech wizards live and breathe digital.
+                    </p>
+                    <p class="text-lg text-gray-300 mb-8">
+                        We don't just build campaigns; we build partnerships. We dive deep into your brand's DNA to create marketing solutions that are not only innovative but also deliver measurable results.
+                    </p>
+                    <a href="#services" class="border-2 border-brand-red text-brand-red px-8 py-3 rounded-full font-bold text-lg hover:bg-brand-red hover:text-white transition duration-300">
+                        Our Services
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-brand-dark overflow-hidden">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 reveal">
+                    <span class="text-brand-red font-semibold uppercase tracking-wider">What We Do</span>
+                    <h2 class="text-4xl lg:text-5xl font-extrabold text-white mt-4">
+                        Our Core Services
+                    </h2>
+                </div>
+                
+                <!-- Services Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="bg-brand-gray p-8 rounded-lg shadow-lg transform hover:-translate-y-2 transition duration-300 reveal" data-delay="100">
+                        <!-- Icon -->
+                        <div class="text-brand-red mb-4">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3">SEO</h3>
+                        <p class="text-gray-300">Dominate search rankings and attract organic traffic with our expert SEO strategies, tailored for the Indian market.</p>
+                    </div>
+                    
+                    <!-- Service Card 2 -->
+                    <div class="bg-brand-gray p-8 rounded-lg shadow-lg transform hover:-translate-y-2 transition duration-300 reveal" data-delay="200">
+                        <!-- Icon -->
+                        <div class="text-brand-red mb-4">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a2 2 0 01-2-2V4a2 2 0 012-2h8a2 2 0 012 2v4z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3">Social Media</h3>
+                        <p class="text-gray-300">Engage, inspire, and grow your community on platforms that matter. We create content that sparks conversations.</p>
+                    </div>
+                    
+                    <!-- Service Card 3 -->
+                    <div class="bg-brand-gray p-8 rounded-lg shadow-lg transform hover:-translate-y-2 transition duration-300 reveal" data-delay="300">
+                        <!-- Icon -->
+                        <div class="text-brand-red mb-4">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l-4 4-4 4-4-4 4-4"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3">Web Development</h3>
+                        <p class="text-gray-300">From stunning websites to high-converting landing pages, our developers build fast, responsive, and secure digital experiences.</p>
+                    </div>
+                    
+                    <!-- Service Card 4 -->
+                    <div class="bg-brand-gray p-8 rounded-lg shadow-lg transform hover:-translate-y-2 transition duration-300 reveal" data-delay="400">
+                        <!-- Icon -->
+                        <div class="text-brand-red mb-4">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3.124a1 1 0 011.414.142l3.86 3.86a1 1 0 01.142 1.414l-1.58 1.58a1 1 0 01-1.414 0l-1.06-1.06a1 1 0 00-1.414 0l-1.06 1.06a1 1 0 01-1.414 0l-1.06-1.06a1 1 0 00-1.414 0l-1.06 1.06a1 1 0 01-1.414 0z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3">PPC & Ads</h3>
+                        <p class="text-gray-300">Get instant, qualified traffic. We manage your Google, Facebook, and Instagram ad campaigns for maximum ROI.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-20 bg-brand-gray overflow-hidden">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 reveal">
+                    <span class="text-brand-red font-semibold uppercase tracking-wider">Our Work</span>
+                    <h2 class="text-4xl lg:text-5xl font-extrabold text-white mt-4">
+                        Trusted By Businesses in India
+                    </h2>
+                </div>
+                
+                <!-- Client Logos -->
+                <div class="flex flex-wrap justify-center items-center gap-8 lg:gap-12 opacity-60">
+                    <!-- FIX: Changed all C:\... paths to relative images/... paths and added fallbacks -->
+                    <img src="C:\Users\KRIMISHA\OneDrive\Desktop\html\project\images\Aasharay.jpg" alt="Client Logo" class="h-12 lg:h-16 client-logo reveal" data-delay="100">
+                    <img src="C:\Users\KRIMISHA\OneDrive\Desktop\html\project\images\icon.jpg" alt="Client Logo" class="h-12 lg:h-16 client-logo reveal" data-delay="200">
+                    <img src="C:\Users\KRIMISHA\OneDrive\Desktop\html\project\images\logo in brown.png" alt="Client Logo" class="h-12 lg:h-16 client-logo reveal" data-delay="300">
+                    <img src="C:\Users\KRIMISHA\OneDrive\Desktop\html\project\images\suvarnayug.jpg" alt="Client Logo" class="h-12 lg:h-16 client-logo reveal" data-delay="400">
+                    <img src="C:\Users\KRIMISHA\OneDrive\Desktop\html\project\images\priya.jpg" alt="Client Logo" class="h-12 lg:h-16 client-logo reveal" data-delay="500">
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-brand-dark overflow-hidden">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 reveal">
+                    <span class="text-brand-red font-semibold uppercase tracking-wider">Get In Touch</span>
+                    <h2 class="text-4xl lg:text-5xl font-extrabold text-white mt-4">
+                        Let's Build Something Great
+                    </h2>
+                </div>
+                
+                <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
+                    <!-- Contact Info -->
+                    <div class="text-gray-300 reveal" data-delay="100">
+                        <h3 class="text-3xl font-bold text-white mb-6">Contact Details</h3>
+                        <p class="text-lg mb-4">
+                            Ready to start your project? Send us a message or give us a call. We're based in India and ready to help.
+                        </p>
+                        <div class="space-y-4 mt-8">
+                            <p class="flex items-center text-lg">
+                                <!-- Icon -->
+                                <svg class="w-6 h-6 mr-3 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                spectormedia27@gmail.com
+                            </p>
+                            <p class="flex items-center text-lg">
+                                <!-- Icon -->
+                                <svg class="w-6 h-6 mr-3 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.46 4.383a1 1 0 01-.32 1.028l-1.38 1.38a1 1 0 00-.29 1.41l3.4 3.4a1 1 0 001.41-.29l1.38-1.38a1 1 0 011.028-.32l4.383 1.46a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                                +91 70699 67363
+                            </p>
+                            <p class="flex items-center text-lg">
+                                <!-- Icon -->
+                                <svg class="w-6 h-6 mr-3 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                Mumbai, India
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <form id="contact-form" class="space-y-6 reveal" data-delay="300">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Full Name</label>
+                            <input type="text" id="name" name="name" required
+                                   class="w-full px-4 py-3 bg-brand-gray rounded-lg border border-brand-gray focus:outline-none focus:border-brand-red focus:ring-1 focus:ring-brand-red text-white">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email Address</label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-3 bg-brand-gray rounded-lg border border-brand-gray focus:outline-none focus:border-brand-red focus:ring-1 focus:ring-brand-red text-white">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-1">Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                      class="w-full px-4 py-3 bg-brand-gray rounded-lg border border-brand-gray focus:outline-none focus:border-brand-red focus:ring-1 focus:ring-brand-red text-white"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" 
+                                    class="w-full bg-brand-red text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-red-700 transition duration-300 shadow-lg shadow-brand-red/30">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-gray border-t border-brand-dark">
+        <div class="container mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center">
+            <div class="text-center md:text-left mb-6 md:mb-0">
+                <a href="#" class="text-2xl font-extrabold text-white">
+                    Spector<span class="text-brand-red">Media</span>
+                </a>
+                <p class="text-gray-400 mt-2">Digital Marketing Agency - Made in India</p>
+            </div>
+            <div class="text-gray-400 text-center">
+                <p>&copy; <span id="current-year"></span> Spector Media. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Form Submission -->
+    <div id="form-modal" class="modal">
+        <div class="modal-content" id="modal-content-box">
+            <span class="modal-close" id="modal-close-button">&times;</span>
+            <div class="text-brand-red mb-4">
+                <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            </div>
+            <h2 class="text-2xl font-bold text-white mb-3">Thank You!</h2>
+            <p class="text-lg text-gray-300">Your message has been sent successfully. We'll get in touch with you soon.</p>
+        </div>
+    </div>
+
+
+    <!-- === LINK TO YOUR JAVASCRIPT FILE === -->
+    <!-- This tells the HTML to load your script -->
+    <!-- FIX: Changed filename from main.js to script.js -->
+    <script src="main.js"></script>
+
+</body>
+</html>

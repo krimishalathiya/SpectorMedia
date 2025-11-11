@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spector Media - Admin Dashboard</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Font: Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- === LINK TO YOUR ADMIN CSS FILE === -->
+    <link rel="stylesheet" href="responsive.css">
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-red': '#DC2626', // A strong red
+                        'brand-dark': '#1a1a1a', // A deep black
+                        'brand-gray': '#27272a', // A dark gray
+                    },
+                    fontFamily: {
+                        'sans': ['Manrope', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+<body class="antialiased bg-brand-dark">
+
+    <div class="flex h-screen bg-brand-dark text-gray-200">
+        <!-- Sidebar -->
+        <aside id="sidebar" class="w-64 bg-brand-gray p-6 flex flex-col shadow-lg fixed inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition-transform duration-300 ease-in-out z-50">
+            <!-- Logo -->
+            <a href="admin.html" class="text-3xl font-extrabold text-white mb-8">
+                Spector<span class="text-brand-red">Admin</span>
+            </a>
+            
+            <!-- Navigation -->
+            <nav class="flex-1">
+                <ul class="space-y-3 nav-links">
+                    <li>
+                        <a href="#" class="flex items-center py-3 px-4 rounded-lg bg-brand-red text-white nav-active">
+                            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6-4h.01M12 12h.01M15 12h.01M12 15h.01M15 15h.01M9 15h.01"></path></svg>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center py-3 px-4 rounded-lg text-gray-300 hover:bg-brand-red hover:text-white transition-colors">
+                            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                            Messages
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center py-3 px-4 rounded-lg text-gray-300 hover:bg-brand-red hover:text-white transition-colors">
+                            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
+                            Analytics
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center py-3 px-4 rounded-lg text-gray-300 hover:bg-brand-red hover:text-white transition-colors">
+                            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            Blog Posts
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <!-- Back to site link -->
+            <div class="mt-auto">
+                <a href="index.html" class="flex items-center py-3 px-4 rounded-lg text-gray-300 hover:bg-brand-red hover:text-white transition-colors">
+                    <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h5a3 3 0 013 3v1"></path></svg>
+                    Back to Site
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="flex-1 overflow-y-auto p-6 md:p-10">
+            <!-- Top Header -->
+            <header class="flex justify-between items-center mb-8">
+                <!-- Mobile Menu Button -->
+                <button id="sidebar-toggle" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+                <h1 class="text-4xl font-extrabold text-white hidden md:block">Dashboard</h1>
+                <div class="flex items-center">
+                    <span class="text-gray-300 mr-4">Welcome, Admin</span>
+                    <img src="https://placehold.co/40x40/f5f5f5/1a1a1a?text=A&font=manrope" alt="Admin Profile" class="rounded-full">
+                </div>
+            </header>
+
+            <!-- Dashboard Widgets -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+                <!-- Widget 1: New Leads -->
+                <div class="bg-brand-gray p-6 rounded-lg shadow-lg">
+                    <h3 class="text-gray-400 text-lg font-medium mb-2">New Leads</h3>
+                    <p class="text-5xl font-extrabold text-white">12</p>
+                    <a href="#" class="text-brand-red hover:text-red-400 mt-4 inline-block">View Messages &rarr;</a>
+                </div>
+                <!-- Widget 2: Site Visitors -->
+                <div class="bg-brand-gray p-6 rounded-lg shadow-lg">
+                    <h3 class="text-gray-400 text-lg font-medium mb-2">Site Visitors (24h)</h3>
+                    <p class="text-5xl font-extrabold text-white">1,204</p>
+                    <a href="#" class="text-brand-red hover:text-red-400 mt-4 inline-block">View Analytics &rarr;</a>
+                </div>
+                <!-- Widget 3: Blog Posts -->
+                <div class="bg-brand-gray p-6 rounded-lg shadow-lg">
+                    <h3 class="text-gray-400 text-lg font-medium mb-2">Total Blog Posts</h3>
+                    <p class="text-5xl font-extrabold text-white">8</p>
+                    <a href="#" class="text-brand-red hover:text-red-400 mt-4 inline-block">Manage Posts &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Main Content Blocks (Chart & Table) -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Chart Simulation -->
+                <div class="lg:col-span-2 bg-brand-gray p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-white mb-6">Traffic Overview (Last 7 Days)</h3>
+                    <div class="flex items-end justify-between h-64 space-x-4">
+                        <div class="flex-1 flex flex-col items-center">
+                            <div class="chart-bar w-full bg-brand-red rounded-t-lg" style="height: 40%"></div>
+                            <span class="text-xs text-gray-400 mt-2">Mon</span>
+                        </div>
+                        <div class="flex-1 flex flex-col items-center">
+                            <div class="chart-bar w-full bg-brand-red rounded-t-lg" style="height: 60%"></div>
+                            <span class="text-xs text-gray-400 mt-2">Tue</span>
+                        </div>
+                        <div class="flex-1 flex flex-col items-center">
+                            <div class="chart-bar w-full bg-brand-red rounded-t-lg" style="height: 50%"></div>
+                            <span class="text-xs text-gray-400 mt-2">Wed</span>
+                        </div>
+                        <div class="flex-1 flex flex-col items-center">
+                            <div class="chart-bar w-full bg-brand-red rounded-t-lg" style="height: 75%"></div>
+                            <span class="text-xs text-gray-400 mt-2">Thu</span>
+                        </div>
+                        <div class="flex-1 flex flex-col items-center">
+                            <div class="chart-bar w-full bg-brand-red rounded-t-lg" style="height: 90%"></div>
+                            <span class="text-xs text-gray-400 mt-2">Fri</span>
+                        </div>
+                        <div class="flex-1 flex flex-col items-center">
+                            <div class="chart-bar w-full bg-brand-red rounded-t-lg" style="height: 65%"></div>
+                            <span class="text-xs text-gray-400 mt-2">Sat</span>
+                        </div>
+                        <div class="flex-1 flex flex-col items-center">
+                            <div class="chart-bar w-full bg-brand-red rounded-t-lg" style="height: 80%"></div>
+                            <span class="text-xs text-gray-400 mt-2">Sun</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Messages Table -->
+                <div class="bg-brand-gray p-6 rounded-lg shadow-lg overflow-x-auto">
+                    <h3 class="text-xl font-bold text-white mb-6">Recent Messages</h3>
+                    <table class="w-full text-left">
+                        <thead>
+                            <tr class="border-b border-brand-dark">
+                                <th class="py-3 text-gray-400 font-semibold">Name</th>
+                                <th class="py-3 text-gray-400 font-semibold">Date</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-brand-dark">
+                            <tr>
+                                <td class="py-4">Aarav Patel</td>
+                                <td class="py-4 text-sm text-gray-400">Today</td>
+                            </tr>
+                            <tr>
+                                <td class="py-4">Priya Sharma</td>
+                                <td class="py-4 text-sm text-gray-400">Today</td>
+                            </tr>
+                            <tr>
+                                <td class="py-4">Rohan Gupta</td>
+                                <td class="py-4 text-sm text-gray-400">Yesterday</td>
+                            </tr>
+                            <tr>
+                                <td class="py-4">Isha Singh</td>
+                                <td class="py-4 text-sm text-gray-400">Yesterday</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </main>
+        
+        <!-- Overlay for mobile sidebar -->
+        <div id="sidebar-overlay" class="md:hidden fixed inset-0 bg-black/50 z-40 hidden"></div>
+
+    </div>
+
+    <!-- === LINK TO YOUR ADMIN JAVASCRIPT FILE === -->
+    <script src="admin.js"></script>
+</body>
+</html>
